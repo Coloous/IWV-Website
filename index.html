@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iconic Wealth Ventures | Where Wealth, Wellness & Ambition Converge</title>
+<meta name="description" content="Premier health and wellness strategies for busy entrepreneurs. Join the IWV Inner Circle and build health, wealth, and entrepreneurial mastery.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════
+   RESET & ROOT
+═══════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --navy:   #0B1638;
+  --navy2:  #0F1F4A;
+  --gold:   #C4973A;
+  --gold-l: #E2BB6A;
+  --gold-xl:#F5DFA0;
+  --plum:   #3B1F5E;
+  --plum-l: #6B3FA0;
+  --brown:  #3E2A1A;
+  --ivory:  #FAF8F4;
+  --cream:  #F5F2EB;
+  --white:  #FFFFFF;
+  --gray:   #4A4A6A;
+  --lgray:  #E8E4DC;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Montserrat', sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--navy); background: var(--ivory); overflow-x: hidden; }
+img { max-width:100%; display:block; }
+a { text-decoration:none; color:inherit; }
+
+/* ═══════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════ */
+.display-xl { font-family:var(--font-display); font-size:clamp(52px,7vw,96px); font-weight:700; line-height:1.02; }
+.display-lg { font-family:var(--font-display); font-size:clamp(38px,5vw,68px); font-weight:700; line-height:1.06; }
+.display-md { font-family:var(--font-display); font-size:clamp(28px,3.5vw,48px); font-weight:700; line-height:1.1; }
+.display-sm { font-family:var(--font-display); font-size:clamp(22px,2.5vw,32px); font-weight:600; line-height:1.2; }
+.eyebrow { font-size:11px; font-weight:700; letter-spacing:4px; text-transform:uppercase; }
+.body-lg { font-size:18px; line-height:1.75; font-weight:400; }
+.body-md { font-size:16px; line-height:1.7; font-weight:400; }
+.body-sm { font-size:14px; line-height:1.65; font-weight:400; }
+
+/* ═══════════════════════════════════
+   LAYOUT
+═══════════════════════════════════ */
+.container { max-width:1200px; margin:0 auto; padding:0 40px; }
+.container-sm { max-width:860px; margin:0 auto; padding:0 40px; }
+.section { padding:100px 0; }
+.section-sm { padding:70px 0; }
+
+/* ═══════════════════════════════════
+   BUTTONS
+═══════════════════════════════════ */
+.btn { display:inline-block; font-family:var(--font-body); font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:16px 36px; cursor:pointer; border:none; transition:all .25s; }
+.btn-gold { background:var(--gold); color:var(--navy); }
+.btn-gold:hover { background:var(--gold-l); transform:translateY(-2px); box-shadow:0 8px 32px rgba(196,151,58,.3); }
+.btn-outline-gold { background:transparent; color:var(--gold); border:1.5px solid var(--gold); }
+.btn-outline-gold:hover { background:var(--gold); color:var(--navy); }
+.btn-outline-white { background:transparent; color:var(--white); border:1.5px solid rgba(255,255,255,.4); }
+.btn-outline-white:hover { border-color:var(--gold); color:var(--gold); }
+.btn-navy { background:var(--navy); color:var(--white); }
+.btn-navy:hover { background:var(--navy2); transform:translateY(-2px); }
+
+/* ═══════════════════════════════════
+   NAVIGATION
+═══════════════════════════════════ */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:1000;
+  padding:20px 0;
+  background:rgba(11,22,56,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(196,151,58,.15);
+  transition:all .3s;
+}
+nav.scrolled { padding:14px 0; box-shadow:0 4px 40px rgba(0,0,0,.3); }
+.nav-inner { display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; padding:0 40px; }
+.nav-logo { font-family:var(--font-display); font-size:26px; font-weight:700; color:var(--white); }
+.nav-logo span { color:var(--gold); }
+.nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+.nav-links a { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.75); transition:.2s; }
+.nav-links a:hover { color:var(--gold); }
+.nav-cta { background:var(--gold); color:var(--navy); padding:10px 24px; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; transition:.2s; }
+.nav-cta:hover { background:var(--gold-l); color:var(--navy); }
+.nav-hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.nav-hamburger span { width:24px; height:2px; background:var(--white); transition:.3s; }
+.mobile-menu { display:none; position:fixed; inset:0; background:var(--navy); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:32px; }
+.mobile-menu.open { display:flex; }
+.mobile-menu a { font-family:var(--font-display); font-size:32px; font-weight:600; color:var(--white); }
+.mobile-menu a:hover { color:var(--gold); }
+.mobile-close { position:absolute; top:30px; right:40px; font-size:32px; color:var(--white); cursor:pointer; background:none; border:none; }
+
+/* ═══════════════════════════════════
+   HERO
+═══════════════════════════════════ */
+#home {
+  min-height:100vh;
+  background:var(--navy);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  padding-top:80px;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 60% 60% at 80% 20%, rgba(196,151,58,.1) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(59,31,94,.5) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 60% 60%, rgba(62,42,26,.3) 0%, transparent 50%);
+}
+.hero-grid {
+  position:absolute; inset:0; opacity:.04;
+  background-image:linear-gradient(rgba(196,151,58,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(196,151,58,.5) 1px, transparent 1px);
+  background-size:60px 60px;
+}
+.hero-content { position:relative; z-index:2; max-width:1200px; margin:0 auto; padding:80px 40px; }
+.hero-eyebrow { color:var(--gold); margin-bottom:28px; }
+.hero-headline { color:var(--white); margin-bottom:20px; }
+.hero-headline em { color:var(--gold); font-style:italic; }
+.hero-tagline {
+  font-family:var(--font-display);
+  font-size:clamp(18px,2vw,24px);
+  font-style:italic;
+  color:rgba(255,255,255,.6);
+  margin-bottom:48px;
+  max-width:640px;
+}
+.hero-ctas { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:80px; }
+.hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; max-width:560px; background:rgba(196,151,58,.2); border:1px solid rgba(196,151,58,.2); }
+.hero-stat { padding:24px 28px; background:rgba(11,22,56,.8); }
+.hero-stat-num { font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--gold); margin-bottom:4px; }
+.hero-stat-label { font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.hero-scroll {
+  position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  color:rgba(255,255,255,.3); font-size:10px; letter-spacing:3px; text-transform:uppercase;
+}
+.hero-scroll-line { width:1px; height:48px; background:linear-gradient(to bottom, var(--gold), transparent); animation:scrollPulse 2s infinite; }
+@keyframes scrollPulse { 0%,100%{opacity:.3} 50%{opacity:1} }
+
+/* ═══════════════════════════════════
+   TAGLINE BAND
+═══════════════════════════════════ */
+.tagline-band {
+  background:var(--gold);
+  padding:20px 0;
+  overflow:hidden;
+}
+.tagline-ticker { display:flex; gap:60px; animation:ticker 18s linear infinite; white-space:nowrap; }
+.tagline-ticker span { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--navy); flex-shrink:0; }
+.tagline-ticker .dot { color:var(--navy); opacity:.4; }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ═══════════════════════════════════
+   FOUNDER INTRO
+═══════════════════════════════════ */
+.founder-section { background:var(--ivory); }
+.founder-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.founder-image-wrap {
+  position:relative;
+}
+.founder-image-placeholder {
+  aspect-ratio:3/4;
+  background:linear-gradient(135deg, var(--navy) 0%, var(--plum) 100%);
+  display:flex; align-items:flex-end;
+  padding:32px;
+  position:relative; overflow:hidden;
+}
+.founder-image-placeholder::before {
+  content:'';
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at 30% 20%, rgba(196,151,58,.2) 0%, transparent 60%);
+}
+.founder-image-label {
+  position:relative; z-index:1;
+  font-family:var(--font-display); font-size:18px; font-style:italic; color:rgba(255,255,255,.6);
+}
+.founder-badge {
+  position:absolute; bottom:-20px; right:-20px;
+  background:var(--gold); padding:20px 24px;
+  font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+  color:var(--navy); max-width:180px; text-align:center;
+}
+.founder-content .eyebrow { color:var(--gold); margin-bottom:16px; }
+.founder-content h2 { margin-bottom:24px; }
+.founder-content p { color:var(--gray); margin-bottom:20px; }
+.founder-quote {
+  border-left:3px solid var(--gold);
+  padding-left:24px; margin:32px 0;
+  font-family:var(--font-display); font-size:22px; font-style:italic;
+  color:var(--navy); line-height:1.5;
+}
+.founder-credentials { display:flex; flex-direction:column; gap:10px; margin-top:32px; }
+.credential { display:flex; align-items:center; gap:12px; font-size:13px; color:var(--gray); }
+.credential-dot { width:6px; height:6px; background:var(--gold); flex-shrink:0; }
+
+/* ═══════════════════════════════════
+   PILLARS OVERVIEW
+═══════════════════════════════════ */
+.pillars-section { background:var(--navy); }
+.pillars-header { text-align:center; margin-bottom:64px; }
+.pillars-header .eyebrow { color:var(--gold); margin-bottom:16px; }
+.pillars-header h2 { color:var(--white); }
+.pillars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.pillar-card {
+  padding:52px 40px;
+  position:relative; overflow:hidden;
+  cursor:pointer;
+  transition:all .3s;
+}
+.pillar-card::before {
+  content:''; position:absolute; inset:0; opacity:0;
+  transition:.3s;
+}
+.pillar-card:hover::before { opacity:1; }
+.pillar-card.navy { background:rgba(15,31,74,.8); }
+.pillar-card.navy::before { background:rgba(196,151,58,.06); }
+.pillar-card.gold-bg { background:rgba(62,42,26,.6); }
+.pillar-card.gold-bg::before { background:rgba(196,151,58,.1); }
+.pillar-card.plum-bg { background:rgba(59,31,94,.6); }
+.pillar-card.plum-bg::before { background:rgba(107,63,160,.1); }
+.pillar-icon { font-size:36px; margin-bottom:24px; display:block; }
+.pillar-card .eyebrow { color:var(--gold); margin-bottom:12px; }
+.pillar-card h3 { font-family:var(--font-display); font-size:28px; font-weight:700; color:var(--white); margin-bottom:16px; }
+.pillar-card p { font-size:14px; color:rgba(255,255,255,.55); line-height:1.7; margin-bottom:28px; }
+.pillar-link { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); display:flex; align-items:center; gap:8px; }
+.pillar-link::after { content:'→'; transition:.2s; }
+.pillar-card:hover .pillar-link::after { transform:translateX(6px); }
+.pillar-num {
+  position:absolute; top:32px; right:32px;
+  font-family:var(--font-display); font-size:72px; font-weight:700;
+  color:rgba(196,151,58,.06); line-height:1;
+}
+
+/* ═══════════════════════════════════
+   WEBINAR SECTION
+═══════════════════════════════════ */
+.webinar-section {
+  background:linear-gradient(135deg, var(--navy) 0%, var(--plum) 100%);
+  position:relative; overflow:hidden;
+}
+.webinar-section::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 70% 60% at 80% 50%, rgba(196,151,58,.12) 0%, transparent 60%);
+}
+.webinar-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:80px; align-items:center; position:relative; z-index:1; }
+.webinar-eyebrow { color:var(--gold-l); margin-bottom:16px; }
+.webinar-title { color:var(--white); margin-bottom:8px; }
+.webinar-subtitle { font-family:var(--font-display); font-size:22px; font-style:italic; color:var(--gold); margin-bottom:28px; }
+.webinar-desc { color:rgba(255,255,255,.65); margin-bottom:40px; }
+.webinar-outcomes { list-style:none; margin-bottom:44px; display:flex; flex-direction:column; gap:14px; }
+.webinar-outcomes li { display:flex; align-items:flex-start; gap:14px; font-size:14px; color:rgba(255,255,255,.75); }
+.webinar-outcomes li::before { content:'◆'; color:var(--gold); font-size:10px; margin-top:4px; flex-shrink:0; }
+.webinar-register {
+  background:rgba(250,248,244,.06);
+  border:1px solid rgba(196,151,58,.25);
+  padding:40px;
+}
+.register-title { font-family:var(--font-display); font-size:24px; font-weight:700; color:var(--white); margin-bottom:8px; }
+.register-sub { font-size:13px; color:rgba(255,255,255,.5); margin-bottom:28px; }
+.register-form { display:flex; flex-direction:column; gap:14px; }
+.register-form input {
+  background:rgba(255,255,255,.08); border:1px solid rgba(196,151,58,.2);
+  padding:14px 18px; font-family:var(--font-body); font-size:13px; color:var(--white);
+  outline:none; transition:.2s;
+}
+.register-form input::placeholder { color:rgba(255,255,255,.35); }
+.register-form input:focus { border-color:var(--gold); }
+.register-form .btn { width:100%; text-align:center; }
+.register-note { font-size:11px; color:rgba(255,255,255,.35); text-align:center; margin-top:12px; }
+
+/* ═══════════════════════════════════
+   PAGE SECTIONS (Pillar Pages)
+═══════════════════════════════════ */
+.page-hero {
+  padding:160px 0 100px;
+  position:relative; overflow:hidden;
+}
+.page-hero.navy-bg { background:var(--navy); }
+.page-hero.gold-bg { background:var(--brown); }
+.page-hero.plum-bg { background:var(--plum); }
+.page-hero::after {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 50% 50% at 80% 30%, rgba(196,151,58,.12) 0%, transparent 60%);
+}
+.page-hero-content { position:relative; z-index:1; max-width:760px; }
+.page-hero .eyebrow { color:var(--gold); margin-bottom:20px; }
+.page-hero h1 { color:var(--white); margin-bottom:20px; }
+.page-hero p { font-size:18px; color:rgba(255,255,255,.65); font-style:italic; font-family:var(--font-display); margin-bottom:40px; }
+
+/* ═══════════════════════════════════
+   CONTENT SECTIONS
+═══════════════════════════════════ */
+.content-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.content-block h2 { margin-bottom:20px; }
+.content-block p { color:var(--gray); margin-bottom:16px; }
+.benefits-list { list-style:none; display:flex; flex-direction:column; gap:16px; }
+.benefits-list li { display:flex; align-items:flex-start; gap:16px; }
+.benefit-diamond { width:8px; height:8px; background:var(--gold); transform:rotate(45deg); flex-shrink:0; margin-top:6px; }
+.benefit-text h4 { font-size:15px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+.benefit-text p { font-size:13px; color:var(--gray); margin:0; }
+
+/* ═══════════════════════════════════
+   SOCIAL PROOF BAND
+═══════════════════════════════════ */
+.proof-section { background:var(--cream); }
+.proof-inner { text-align:center; }
+.proof-inner .eyebrow { color:var(--gold); margin-bottom:16px; }
+.proof-inner h2 { margin-bottom:16px; }
+.proof-inner p { max-width:700px; margin:0 auto 48px; color:var(--gray); }
+.proof-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.proof-card {
+  background:var(--white); padding:36px 32px;
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 4px 24px rgba(11,22,56,.06);
+}
+.proof-card-quote { font-family:var(--font-display); font-size:52px; color:var(--gold); line-height:.8; margin-bottom:16px; }
+.proof-card p { font-size:14px; color:var(--gray); font-style:italic; margin-bottom:20px; line-height:1.7; }
+.proof-card-attr { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--navy); }
+
+/* ═══════════════════════════════════
+   BLOG SECTION
+═══════════════════════════════════ */
+.blog-section { background:var(--ivory); }
+.blog-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:48px; }
+.blog-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.blog-card {
+  background:var(--white); overflow:hidden;
+  box-shadow:0 4px 24px rgba(11,22,56,.05);
+  transition:.3s;
+}
+.blog-card:hover { transform:translateY(-4px); box-shadow:0 12px 48px rgba(11,22,56,.1); }
+.blog-card-img {
+  height:200px; display:flex; align-items:flex-end; padding:24px;
+  position:relative; overflow:hidden;
+}
+.blog-card-img.navy { background:linear-gradient(135deg, var(--navy), var(--navy2)); }
+.blog-card-img.gold { background:linear-gradient(135deg, var(--brown), var(--navy)); }
+.blog-card-img.plum { background:linear-gradient(135deg, var(--plum), var(--navy)); }
+.blog-card-img::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse at 80% 20%, rgba(196,151,58,.15) 0%, transparent 60%);
+}
+.blog-card-pillar { position:relative; z-index:1; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+.blog-card-body { padding:28px; }
+.blog-card-body h3 { font-family:var(--font-display); font-size:20px; font-weight:700; color:var(--navy); margin-bottom:12px; line-height:1.3; }
+.blog-card-body p { font-size:13px; color:var(--gray); margin-bottom:20px; line-height:1.65; }
+.blog-card-meta { display:flex; justify-content:space-between; align-items:center; }
+.blog-read-time { font-size:11px; color:rgba(74,74,106,.5); letter-spacing:1px; }
+.blog-read-more { font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); }
+
+/* ═══════════════════════════════════
+   PODCAST SECTION
+═══════════════════════════════════ */
+.podcast-section { background:var(--navy); position:relative; overflow:hidden; }
+.podcast-section::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 80% at 10% 50%, rgba(59,31,94,.6) 0%, transparent 60%);
+}
+.podcast-inner { display:grid; grid-template-columns:1fr 1.2fr; gap:80px; align-items:center; position:relative; z-index:1; }
+.podcast-badge {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(196,151,58,.1); border:1px solid rgba(196,151,58,.2);
+  padding:10px 20px; margin-bottom:28px;
+}
+.podcast-badge-dot { width:8px; height:8px; background:var(--gold); border-radius:50%; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.6;transform:scale(.85)} }
+.podcast-badge span { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+.podcast-inner h2 { color:var(--white); margin-bottom:16px; }
+.podcast-inner p { color:rgba(255,255,255,.6); margin-bottom:36px; }
+.podcast-platforms { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:40px; }
+.platform-pill {
+  padding:8px 20px; border:1px solid rgba(196,151,58,.25);
+  font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+  color:rgba(255,255,255,.6);
+}
+.podcast-episodes { display:flex; flex-direction:column; gap:2px; }
+.episode-card {
+  background:rgba(255,255,255,.04); border-left:2px solid rgba(196,151,58,.3);
+  padding:20px 24px; transition:.2s;
+}
+.episode-card:hover { background:rgba(255,255,255,.07); border-left-color:var(--gold); }
+.episode-num { font-size:10px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:6px; }
+.episode-title { font-family:var(--font-display); font-size:16px; font-weight:600; color:var(--white); margin-bottom:4px; }
+.episode-meta { font-size:11px; color:rgba(255,255,255,.35); }
+
+/* ═══════════════════════════════════
+   INNER CIRCLE CTA
+═══════════════════════════════════ */
+.inner-circle-section {
+  background:var(--gold);
+  padding:100px 0;
+  position:relative; overflow:hidden;
+}
+.inner-circle-section::before {
+  content:''; position:absolute; inset:0;
+  background:radial-gradient(ellipse 60% 80% at 90% 50%, rgba(11,22,56,.15) 0%, transparent 60%);
+}
+.inner-circle-inner { text-align:center; position:relative; z-index:1; max-width:760px; margin:0 auto; }
+.inner-circle-inner .eyebrow { color:var(--navy); opacity:.6; margin-bottom:16px; }
+.inner-circle-inner h2 { color:var(--navy); margin-bottom:20px; }
+.inner-circle-inner p { color:rgba(11,22,56,.7); margin-bottom:40px; font-size:18px; }
+.inner-circle-features { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:48px; }
+.ic-feature { text-align:center; }
+.ic-feature-icon { font-size:28px; margin-bottom:8px; }
+.ic-feature h4 { font-size:13px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+.ic-feature p { font-size:12px; color:rgba(11,22,56,.6); }
+
+/* ═══════════════════════════════════
+   HEALTH PAGE
+═══════════════════════════════════ */
+.health-features { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--lgray); }
+.health-feature { background:var(--white); padding:40px 32px; }
+.health-feature-icon { font-size:32px; margin-bottom:16px; }
+.health-feature h3 { font-family:var(--font-display); font-size:20px; font-weight:700; color:var(--navy); margin-bottom:10px; }
+.health-feature p { font-size:13px; color:var(--gray); line-height:1.7; }
+
+/* ═══════════════════════════════════
+   MONEY PAGE
+═══════════════════════════════════ */
+.money-steps { display:flex; flex-direction:column; gap:2px; }
+.money-step {
+  display:grid; grid-template-columns:80px 1fr;
+  background:var(--cream);
+  transition:.2s;
+}
+.money-step:hover { background:var(--white); }
+.step-num-col { background:var(--navy); display:flex; align-items:center; justify-content:center; }
+.step-num { font-family:var(--font-display); font-size:40px; font-weight:700; color:var(--gold); }
+.step-body { padding:32px; }
+.step-body h3 { font-family:var(--font-display); font-size:22px; font-weight:700; color:var(--navy); margin-bottom:8px; }
+.step-body p { font-size:14px; color:var(--gray); line-height:1.7; }
+
+/* ═══════════════════════════════════
+   MINDSET PAGE
+═══════════════════════════════════ */
+.mindset-cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+.mindset-card {
+  padding:40px 36px; position:relative; overflow:hidden;
+  background:var(--white); box-shadow:0 4px 24px rgba(11,22,56,.06);
+  border-top:3px solid transparent; transition:.3s;
+}
+.mindset-card.gold-top { border-top-color:var(--gold); }
+.mindset-card.navy-top { border-top-color:var(--navy); }
+.mindset-card.plum-top { border-top-color:var(--plum); }
+.mindset-card.brown-top { border-top-color:var(--brown); }
+.mindset-card:hover { transform:translateY(-4px); box-shadow:0 12px 48px rgba(11,22,56,.1); }
+.mindset-card h3 { font-family:var(--font-display); font-size:22px; font-weight:700; color:var(--navy); margin-bottom:10px; }
+.mindset-card p { font-size:14px; color:var(--gray); line-height:1.7; }
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+footer { background:var(--navy); padding:80px 0 40px; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
+.footer-brand .nav-logo { font-size:32px; margin-bottom:16px; display:block; }
+.footer-brand p { font-size:13px; color:rgba(255,255,255,.45); line-height:1.7; max-width:280px; margin-bottom:24px; }
+.footer-tagline { font-family:var(--font-display); font-size:16px; font-style:italic; color:var(--gold); }
+.footer-col h4 { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:20px; }
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:12px; }
+.footer-col ul a { font-size:13px; color:rgba(255,255,255,.55); transition:.2s; }
+.footer-col ul a:hover { color:var(--gold); }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.07); padding-top:32px; display:flex; justify-content:space-between; align-items:center; }
+.footer-bottom p { font-size:12px; color:rgba(255,255,255,.25); }
+.social-links { display:flex; gap:16px; }
+.social-link { width:36px; height:36px; border:1px solid rgba(255,255,255,.15); display:flex; align-items:center; justify-content:center; font-size:13px; color:rgba(255,255,255,.4); transition:.2s; }
+.social-link:hover { border-color:var(--gold); color:var(--gold); }
+
+/* ═══════════════════════════════════
+   SECTION DIVIDER
+═══════════════════════════════════ */
+.gold-divider { width:60px; height:3px; background:var(--gold); margin:0 0 32px; }
+.gold-divider.center { margin:0 auto 32px; }
+
+/* ═══════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════ */
+.fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s, transform .7s; }
+.fade-up.visible { opacity:1; transform:translateY(0); }
+.fade-up:nth-child(2) { transition-delay:.1s; }
+.fade-up:nth-child(3) { transition-delay:.2s; }
+.fade-up:nth-child(4) { transition-delay:.3s; }
+
+/* ═══════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════ */
+@media(max-width:900px) {
+  .nav-links, .nav-cta { display:none; }
+  .nav-hamburger { display:flex; }
+  .founder-grid, .content-grid, .webinar-grid, .podcast-inner, .footer-grid { grid-template-columns:1fr; gap:48px; }
+  .pillars-grid, .health-features, .inner-circle-features, .proof-cards { grid-template-columns:1fr; }
+  .blog-grid { grid-template-columns:1fr 1fr; }
+  .mindset-cards { grid-template-columns:1fr; }
+  .hero-stats { grid-template-columns:repeat(3,1fr); }
+  .blog-header { flex-direction:column; gap:16px; align-items:flex-start; }
+  .container, .container-sm { padding:0 24px; }
+  .section { padding:70px 0; }
+}
+@media(max-width:600px) {
+  .blog-grid { grid-template-columns:1fr; }
+  .hero-stats { grid-template-columns:1fr; max-width:280px; }
+  .hero-ctas { flex-direction:column; }
+  .podcast-platforms { justify-content:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">IW<span>V</span></a>
+    <ul class="nav-links">
+      <li><a href="#health">Health</a></li>
+      <li><a href="#money">Money Moves</a></li>
+      <li><a href="#mindset">Mindset</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#podcast">Podcast</a></li>
+      <li><a href="#webinar">Webinar</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <a href="#inner-circle" class="btn nav-cta">Join Inner Circle</a>
+    <div class="nav-hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">✕</button>
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#health" onclick="toggleMenu()">Health & Wellness</a>
+  <a href="#money" onclick="toggleMenu()">Smart Money Moves</a>
+  <a href="#mindset" onclick="toggleMenu()">Entrepreneur Mindset</a>
+  <a href="#blog" onclick="toggleMenu()">Blog</a>
+  <a href="#podcast" onclick="toggleMenu()">Podcast</a>
+  <a href="#webinar" onclick="toggleMenu()">Webinar</a>
+  <a href="#inner-circle" onclick="toggleMenu()">Join Inner Circle</a>
+</div>
+
+<!-- ═══════════════════════════════════
+     HERO
+═══════════════════════════════════ -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="eyebrow hero-eyebrow">Iconic Wealth Ventures</p>
+    <h1 class="display-xl hero-headline">Where Wealth,<br><em>Wellness</em> &<br>Ambition Converge.</h1>
+    <p class="hero-tagline">Abundance is not inherited. It is decided.</p>
+    <div class="hero-ctas">
+      <a href="#inner-circle" class="btn btn-gold">Join the Inner Circle →</a>
+      <a href="#webinar" class="btn btn-outline-white">Free Webinar — Register Now</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">52+</div>
+        <div class="hero-stat-label">Providers Overseen</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">States — Region 3</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Pillars of Growth</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TAGLINE TICKER
+═══════════════════════════════════ -->
+<div class="tagline-band">
+  <div class="tagline-ticker" id="ticker">
+    <span>Abundance Is Not Inherited</span><span class="dot">◆</span>
+    <span>It Is Decided</span><span class="dot">◆</span>
+    <span>Health &amp; Wealth — The Same Strategy</span><span class="dot">◆</span>
+    <span>Be The First. Change The Line. Build The Legacy.</span><span class="dot">◆</span>
+    <span>Your Past Does Not Define Your Future</span><span class="dot">◆</span>
+    <span>Abundance Is Not Inherited</span><span class="dot">◆</span>
+    <span>It Is Decided</span><span class="dot">◆</span>
+    <span>Health &amp; Wealth — The Same Strategy</span><span class="dot">◆</span>
+    <span>Be The First. Change The Line. Build The Legacy.</span><span class="dot">◆</span>
+    <span>Your Past Does Not Define Your Future</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     PILLARS OVERVIEW
+═══════════════════════════════════ -->
+<section class="pillars-section section">
+  <div class="container">
+    <div class="pillars-header">
+      <p class="eyebrow">Three Pillars. One Platform.</p>
+      <h2 class="display-md" style="color:var(--white)">Premier Strategies for Busy Entrepreneurs</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card navy fade-up">
+        <div class="pillar-num">01</div>
+        <span class="pillar-icon">✦</span>
+        <p class="eyebrow">Pillar One</p>
+        <h3>Health & Wellness</h3>
+        <p>Elite health strategies built for high-performing entrepreneurs. Evidence-based protocols for energy, cognition, and sustainable peak performance.</p>
+        <a href="#health" class="pillar-link">Explore Health</a>
+      </div>
+      <div class="pillar-card gold-bg fade-up">
+        <div class="pillar-num">02</div>
+        <span class="pillar-icon">◈</span>
+        <p class="eyebrow">Pillar Two</p>
+        <h3>Smart Money Moves</h3>
+        <p>From cash flow strategy to investment positioning. Build, protect, and multiply wealth with financial intelligence and tactical frameworks.</p>
+        <a href="#money" class="pillar-link">Explore Money</a>
+      </div>
+      <div class="pillar-card plum-bg fade-up">
+        <div class="pillar-num">03</div>
+        <span class="pillar-icon">⬡</span>
+        <p class="eyebrow">Pillar Three</p>
+        <h3>Entrepreneur Mindset</h3>
+        <p>The psychological edge, leadership frameworks, and execution discipline that separate those who aspire from those who build empires.</p>
+        <a href="#mindset" class="pillar-link">Explore Mindset</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOUNDER / ABOUT
+═══════════════════════════════════ -->
+<section id="about" class="founder-section section">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-image-wrap">
+        <div class="founder-image-placeholder">
+          <div class="founder-image-label">Caroline Oloo<br>MSN, FNP-BC<br>Founder, IWV</div>
+        </div>
+        <div class="founder-badge">Board-Certified<br>Clinician &<br>Entrepreneur</div>
+      </div>
+      <div class="founder-content">
+        <p class="eyebrow">The Founder</p>
+        <div class="gold-divider"></div>
+        <h2 class="display-md">Built from the Belief That Abundance Is for Everyone.</h2>
+        <p class="body-md" style="color:var(--gray)">I grew up in a world where wealth was something we watched from a distance. Not because it was impossible — but because no one in our world told us it was ours to claim.</p>
+        <p class="body-md" style="color:var(--gray)">I watched brilliant, hardworking people settle — not out of laziness, but out of a belief passed down like a family heirloom: that abundance was for other people.</p>
+        <blockquote class="founder-quote">"You were not born behind. You were born before your breakthrough."</blockquote>
+        <p class="body-md" style="color:var(--gray)">Iconic Wealth Ventures exists because the information gap is real, the mindset gap is real — and the cost of both is too high.</p>
+        <div class="founder-credentials">
+          <div class="credential"><div class="credential-dot"></div><span>MSN, FNP-BC — Board-Certified Family Nurse Practitioner</span></div>
+          <div class="credential"><div class="credential-dot"></div><span>Director of Clinical Operations — 52+ Providers, 4 States</span></div>
+          <div class="credential"><div class="credential-dot"></div><span>PhD Candidate — Nursing Leadership, Liberty University</span></div>
+          <div class="credential"><div class="credential-dot"></div><span>Co-Founder — Icon Onco Pharmaceuticals, Kenya</span></div>
+          <div class="credential"><div class="credential-dot"></div><span>Host — Money Moves Daily Podcast</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     HEALTH & WELLNESS PAGE
+═══════════════════════════════════ -->
+<section id="health">
+  <div class="page-hero navy-bg">
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="eyebrow">Pillar One</p>
+        <div class="gold-divider"></div>
+        <h1 class="display-lg">Elite Health Is Your Most Valuable Competitive Advantage.</h1>
+        <p>Evidence-based wellness strategies built for high-performing entrepreneurs who cannot afford to operate below peak.</p>
+        <a href="#inner-circle" class="btn btn-gold">Access the Wellness Vault</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background:var(--ivory)">
+    <div class="container">
+      <div class="content-grid">
+        <div class="content-block">
+          <p class="eyebrow" style="color:var(--gold);margin-bottom:16px">Why Health Is the Foundation</p>
+          <div class="gold-divider"></div>
+          <h2 class="display-sm">Your body is your most critical business asset.</h2>
+          <p class="body-md" style="color:var(--gray);margin-top:16px">Your portfolio, your leadership, your decision quality — all of it runs on the same biological fuel. When that fuel is compromised, everything downstream suffers.</p>
+          <p class="body-md" style="color:var(--gray)">The IWV Health & Wellness pillar delivers clinical precision applied to entrepreneurial performance — not lifestyle content, not wellness trends.</p>
+        </div>
+        <div>
+          <ul class="benefits-list">
+            <li><div class="benefit-diamond"></div><div class="benefit-text"><h4>Peak Energy Architecture</h4><p>Science-backed protocols for sustaining cognitive performance and physical energy through demanding schedules.</p></div></li>
+            <li><div class="benefit-diamond"></div><div class="benefit-text"><h4>Executive Nutrition Frameworks</h4><p>Practical nutrition and recovery strategies designed for high-output professional lifestyles — not fitness enthusiasts.</p></div></li>
+            <li><div class="benefit-diamond"></div><div class="benefit-text"><h4>Burnout Prevention Systems</h4><p>Clinical frameworks that prevent burnout before it derails your success trajectory — recovery built into your structure.</p></div></li>
+            <li><div class="benefit-diamond"></div><div class="benefit-text"><h4>GLP-1 & Metabolic Intelligence</h4><p>Expert clinical guidance on metabolic health, weight management, and the decisions that require a licensed perspective.</p></div></li>
+            <li><div class="benefit-diamond"></div><div class="benefit-text"><h4>Sleep as Competitive Strategy</h4><p>The evidence that sleep is your primary performance tool — and the architecture to optimize it for elite output.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="health-features">
+    <div class="health-feature fade-up">
+      <div class="health-feature-icon">🧠</div>
+      <h3>Cognitive Performance</h3>
+      <p>Optimize your brain for strategic thinking, decision quality, and creative problem-solving — the executive capacities that drive your business.</p>
+    </div>
+    <div class="health-feature fade-up">
+      <div class="health-feature-icon">⚡</div>
+      <h3>Energy Systems</h3>
+      <p>Understand your biological energy architecture and build sustainable, high-output capacity without the crash-and-burn cycle.</p>
+    </div>
+    <div class="health-feature fade-up">
+      <div class="health-feature-icon">🛡️</div>
+      <h3>Resilience & Recovery</h3>
+      <p>Clinical stress regulation and recovery frameworks built for the specific pressures of entrepreneurial leadership and high-stakes careers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SMART MONEY MOVES PAGE
+═══════════════════════════════════ -->
+<section id="money">
+  <div class="page-hero gold-bg">
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="eyebrow">Pillar Two</p>
+        <div class="gold-divider"></div>
+        <h1 class="display-lg">Financial Intelligence Is a Skill. Master It.</h1>
+        <p>Build, protect, and multiply wealth with precision — from cash flow strategy to investment positioning and legacy wealth architecture.</p>
+        <a href="#inner-circle" class="btn btn-gold">Start Building Wealth</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background:var(--ivory)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <p class="eyebrow" style="color:var(--gold);margin-bottom:16px">The Roadmap</p>
+        <div class="gold-divider center"></div>
+        <h2 class="display-sm">From Paycheck to Portfolio — Step by Step</h2>
+      </div>
+      <div class="money-steps">
+        <div class="money-step fade-up">
+          <div class="step-num-col"><div class="step-num">01</div></div>
+          <div class="step-body"><h3>Build Your Financial Foundation</h3><p>Emergency fund, debt elimination, and cash flow clarity — the non-negotiable infrastructure that everything else is built on. Entering wealth-building without this foundation amplifies every mistake.</p></div>
+        </div>
+        <div class="money-step fade-up">
+          <div class="step-num-col"><div class="step-num">02</div></div>
+          <div class="step-body"><h3>Grow Your Income Architecture</h3><p>Move from single-stream clinical or professional income to a diversified income architecture — consulting, digital products, real estate, and strategic positioning that scales without your direct time.</p></div>
+        </div>
+        <div class="money-step fade-up">
+          <div class="step-num-col"><div class="step-num">03</div></div>
+          <div class="step-body"><h3>Master Tax Strategy</h3><p>At higher income levels, tax optimization is one of the highest-leverage wealth-building activities available. Maximize tax-advantaged accounts, real estate depreciation, and strategic income timing.</p></div>
+        </div>
+        <div class="money-step fade-up">
+          <div class="step-num-col"><div class="step-num">04</div></div>
+          <div class="step-body"><h3>Build Your Investment Portfolio</h3><p>Index funds, real estate, REITs — the asset classes that build wealth while you sleep. Automated, intentional, and aligned with your timeline to financial independence.</p></div>
+        </div>
+        <div class="money-step fade-up">
+          <div class="step-num-col"><div class="step-num">05</div></div>
+          <div class="step-body"><h3>Create Generational Wealth</h3><p>Be the first to change the financial trajectory of your family. Estate planning, legacy investment, and the decision to build something that outlasts your working years.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     ENTREPRENEUR MINDSET PAGE
+═══════════════════════════════════ -->
+<section id="mindset">
+  <div class="page-hero plum-bg">
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="eyebrow">Pillar Three</p>
+        <div class="gold-divider"></div>
+        <h1 class="display-lg">The Distance Between Vision and Legacy Is Your Mindset.</h1>
+        <p>The psychological edge and leadership frameworks that separate those who aspire from those who build empires — and sustain them.</p>
+        <a href="#inner-circle" class="btn btn-gold">Unlock the Mindset Series</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="background:var(--ivory)">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px">
+        <p class="eyebrow" style="color:var(--gold);margin-bottom:16px">Core Frameworks</p>
+        <div class="gold-divider center"></div>
+        <h2 class="display-sm">The Identity-Level Shifts That Drive Everything</h2>
+      </div>
+      <div class="mindset-cards">
+        <div class="mindset-card gold-top fade-up">
+          <h3>The Wealth Mindset</h3>
+          <p>A wealth mindset is not a feeling — it is a cognitive operating system. Replace scarcity defaults with abundance operating principles, close the knowledge gap, and take the imperfect action that builds identity over time.</p>
+        </div>
+        <div class="mindset-card navy-top fade-up">
+          <h3>Employee to Entrepreneur</h3>
+          <p>The external mechanics of entrepreneurship are learnable in weeks. The internal shift — from employee operating system to entrepreneur operating system — requires deliberate identity work and community exposure.</p>
+        </div>
+        <div class="mindset-card plum-top fade-up">
+          <h3>Network as Net Worth</h3>
+          <p>Your network is the most leverageable resource you have. Build vertically and horizontally. Become a connector. Invest in environments where other people are equally serious about building.</p>
+        </div>
+        <div class="mindset-card brown-top fade-up">
+          <h3>Goal Architecture That Works</h3>
+          <p>Start with identity, not outcome. SMART goals plus behavioral infrastructure. Design your environment before testing your discipline. Build accountability with real consequences.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     WEBINAR SECTION
+═══════════════════════════════════ -->
+<section id="webinar" class="webinar-section section">
+  <div class="container">
+    <div class="webinar-grid">
+      <div>
+        <p class="eyebrow webinar-eyebrow">Free Live Masterclass</p>
+        <div class="gold-divider"></div>
+        <h2 class="display-md webinar-title">From Paycheck<br>to Portfolio</h2>
+        <p class="webinar-subtitle">A Closer Look at Your Health and Your Wealth</p>
+        <p class="body-md webinar-desc">The connection between your physical health and your financial wealth is not a metaphor — it is a mechanism. In this free live session, discover the evidence-based framework that helps ambitious professionals optimize both — and build a life where health and wealth compound together.</p>
+        <ul class="webinar-outcomes">
+          <li>Why your physical health is your highest-leverage financial asset</li>
+          <li>The paycheck trap that keeps smart earners financially fragile — and how to break it</li>
+          <li>How sleep, stress, and energy directly affect your earning capacity and wealth-building behavior</li>
+          <li>A practical, step-by-step framework for building your first portfolio asset</li>
+          <li>An exclusive look at how IWV Inner Circle members are building health and wealth simultaneously</li>
+        </ul>
+        <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+          <div><div class="eyebrow" style="color:rgba(255,255,255,.4);margin-bottom:4px">Format</div><div style="color:var(--white);font-weight:600;font-size:14px">Live + Evergreen Replay</div></div>
+          <div><div class="eyebrow" style="color:rgba(255,255,255,.4);margin-bottom:4px">Duration</div><div style="color:var(--white);font-weight:600;font-size:14px">60 Minutes</div></div>
+          <div><div class="eyebrow" style="color:rgba(255,255,255,.4);margin-bottom:4px">Investment</div><div style="color:var(--gold);font-weight:700;font-size:16px">Free</div></div>
+        </div>
+      </div>
+      <div class="webinar-register">
+        <div class="register-title">Reserve Your Free Seat</div>
+        <div class="register-sub">Join ambitious professionals building health and wealth simultaneously.</div>
+        <div class="register-form">
+          <input type="text" placeholder="First Name">
+          <input type="email" placeholder="Email Address">
+          <a href="#" class="btn btn-gold" style="text-align:center">YES — Save My Free Seat →</a>
+        </div>
+        <p class="register-note">Free to attend. Replay available 48 hours to registered attendees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     BLOG SECTION
+═══════════════════════════════════ -->
+<section id="blog" class="blog-section section">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <p class="eyebrow" style="color:var(--gold);margin-bottom:12px">The IWV Blog</p>
+        <div class="gold-divider"></div>
+        <h2 class="display-sm">Insights Sharp Enough to Change Your Trajectory.</h2>
+      </div>
+      <a href="#blog" class="btn btn-navy">View All Posts</a>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-card fade-up">
+        <div class="blog-card-img navy"><span class="blog-card-pillar">Health & Wellness</span></div>
+        <div class="blog-card-body">
+          <h3>How Entrepreneurs Can Optimize Energy Levels and Sustain Peak Performance</h3>
+          <p>Energy is not a byproduct of success — it is the raw material. Here is the clinical evidence on sustaining elite performance.</p>
+          <div class="blog-card-meta"><span class="blog-read-time">7 min read</span><span class="blog-read-more">Read →</span></div>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-card-img gold"><span class="blog-card-pillar">Smart Money Moves</span></div>
+        <div class="blog-card-body">
+          <h3>Breaking the Paycheck-to-Paycheck Cycle: A Wealth Framework for First-Generation Earners</h3>
+          <p>The cycle is not a discipline problem. It is a systems problem. Here is the complete framework for breaking it permanently.</p>
+          <div class="blog-card-meta"><span class="blog-read-time">8 min read</span><span class="blog-read-more">Read →</span></div>
+        </div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-card-img plum"><span class="blog-card-pillar">Entrepreneur Mindset</span></div>
+        <div class="blog-card-body">
+          <h3>How to Develop a Wealth Mindset When You Did Not Grow Up Wealthy</h3>
+          <p>A wealth mindset is not inherited — it is built. The practical, evidence-informed framework for developing beliefs that create lasting abundance.</p>
+          <div class="blog-card-meta"><span class="blog-read-time">7 min read</span><span class="blog-read-more">Read →</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     PODCAST SECTION
+═══════════════════════════════════ -->
+<section id="podcast" class="podcast-section section">
+  <div class="container">
+    <div class="podcast-inner">
+      <div>
+        <div class="podcast-badge">
+          <div class="podcast-badge-dot"></div>
+          <span>Now Broadcasting</span>
+        </div>
+        <h2 class="display-md" style="color:var(--white);margin-bottom:16px">Money Moves Daily</h2>
+        <p class="body-md" style="color:rgba(255,255,255,.6);margin-bottom:36px">Turn every commute into a competitive advantage. Sharp, expert-level conversations on health, wealth, and entrepreneurial strategy — designed for the professional who is always moving and never coasting.</p>
+        <div class="podcast-platforms">
+          <div class="platform-pill">Spotify</div>
+          <div class="platform-pill">Apple Podcasts</div>
+          <div class="platform-pill">Google Podcasts</div>
+          <div class="platform-pill">YouTube</div>
+        </div>
+        <a href="#podcast" class="btn btn-gold">Subscribe & Listen →</a>
+      </div>
+      <div class="podcast-episodes">
+        <div class="episode-card">
+          <div class="episode-num">EP 001</div>
+          <div class="episode-title">Breaking Free From Limiting Money Beliefs</div>
+          <div class="episode-meta">Money Moves Daily · 28 min</div>
+        </div>
+        <div class="episode-card">
+          <div class="episode-num">EP 002</div>
+          <div class="episode-title">The Financial Education Your Family Didn't Have</div>
+          <div class="episode-meta">Money Moves Daily · 32 min</div>
+        </div>
+        <div class="episode-card">
+          <div class="episode-num">EP 003</div>
+          <div class="episode-title">Why High Earners Stay Financially Fragile</div>
+          <div class="episode-meta">Money Moves Daily · 26 min</div>
+        </div>
+        <div class="episode-card">
+          <div class="episode-num">EP 004</div>
+          <div class="episode-title">Real Estate for the First-Time Investor</div>
+          <div class="episode-meta">Money Moves Daily · 35 min</div>
+        </div>
+        <div class="episode-card">
+          <div class="episode-num">EP 005</div>
+          <div class="episode-title">Health as a Financial Strategy — The Clinical Case</div>
+          <div class="episode-meta">Money Moves Daily · 30 min</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     SOCIAL PROOF
+═══════════════════════════════════ -->
+<section class="proof-section section">
+  <div class="container">
+    <div class="proof-inner">
+      <p class="eyebrow">Authority & Impact</p>
+      <div class="gold-divider center"></div>
+      <h2 class="display-sm">Built on Lived Experience.<br>Not Keynote Stages.</h2>
+      <p class="body-md" style="color:var(--gray)">IWV was built by a board-certified clinician and multi-industry entrepreneur who has operated at the intersection of healthcare systems, financial strategy, and business development across two continents. This is a precision performance platform — not a content brand.</p>
+      <div class="proof-cards">
+        <div class="proof-card fade-up">
+          <div class="proof-card-quote">"</div>
+          <p>The health and wealth connection Caroline teaches completely changed how I approach both my business decisions and my daily routines. I stopped treating them as separate conversations.</p>
+          <div class="proof-card-attr">IWV Inner Circle Member</div>
+        </div>
+        <div class="proof-card fade-up">
+          <div class="proof-card-quote">"</div>
+          <p>As a healthcare professional, I never had the financial education to match my clinical training. IWV gave me the framework I needed to actually start building — not just earning.</p>
+          <div class="proof-card-attr">Nurse Practitioner — IWV Member</div>
+        </div>
+        <div class="proof-card fade-up">
+          <div class="proof-card-quote">"</div>
+          <p>I grew up believing wealth was for other people. The mindset work in this community was the thing that finally made me believe it was possible for me — and then showed me exactly how.</p>
+          <div class="proof-card-attr">First-Generation Entrepreneur — IWV Member</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     INNER CIRCLE CTA
+═══════════════════════════════════ -->
+<section id="inner-circle" class="inner-circle-section">
+  <div class="container">
+    <div class="inner-circle-inner">
+      <p class="eyebrow">The IWV Inner Circle</p>
+      <div class="gold-divider center"></div>
+      <h2 class="display-lg" style="color:var(--navy)">For the Ones Who Refused to Stay Where They Started.</h2>
+      <p>The Inner Circle is where the frameworks from the blog, podcast, and webinars become a lived practice — supported by a vetted community of ambitious professionals who are building alongside you.</p>
+      <div class="inner-circle-features">
+        <div class="ic-feature fade-up">
+          <div class="ic-feature-icon">📅</div>
+          <h4>Monthly Live Webinars</h4>
+          <p>Expert-led sessions across all three pillars with direct Q&A access.</p>
+        </div>
+        <div class="ic-feature fade-up">
+          <div class="ic-feature-icon">📚</div>
+          <h4>Full Resource Library</h4>
+          <p>Frameworks, guides, and clinical protocols — always expanding.</p>
+        </div>
+        <div class="ic-feature fade-up">
+          <div class="ic-feature-icon">🤝</div>
+          <h4>Peer Community</h4>
+          <p>A vetted network of professionals who are serious about building.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="#" class="btn btn-navy">Join the Inner Circle →</a>
+        <a href="#webinar" class="btn btn-outline-gold" style="border-color:var(--navy);color:var(--navy)">Start with the Free Webinar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+═══════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">IW<span>V</span></a>
+        <p>Premier health and wellness strategies for busy entrepreneurs. Where wealth, wellness, and ambition converge.</p>
+        <div class="footer-tagline">"Abundance is not inherited. It is decided."</div>
+      </div>
+      <div class="footer-col">
+        <h4>Pillars</h4>
+        <ul>
+          <li><a href="#health">Health & Wellness</a></li>
+          <li><a href="#money">Smart Money Moves</a></li>
+          <li><a href="#mindset">Entrepreneur Mindset</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Content</h4>
+        <ul>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#podcast">Podcast</a></li>
+          <li><a href="#webinar">Webinars</a></li>
+          <li><a href="#about">About Caroline</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#inner-circle">Inner Circle</a></li>
+          <li><a href="#">Growth & Glow Community</a></li>
+          <li><a href="#">Money Moves Daily</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Iconic Wealth Ventures. All rights reserved. | Caroline Oloo, MSN, FNP-BC</p>
+      <div class="social-links">
+        <a href="#" class="social-link">f</a>
+        <a href="#" class="social-link">in</a>
+        <a href="#" class="social-link">🎙</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════ -->
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// Fade-up observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Active nav link
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if(window.scrollY >= s.offsetTop - 120) current = s.id; });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#'+current ? 'var(--gold)' : '';
+  });
+});
+</script>
+</body>
+</html>
